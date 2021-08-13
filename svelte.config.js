@@ -5,7 +5,7 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 
-		adapte: adapter(),
+		adapter: adapter(),
 		target: '#svelte'
 	}
 };
