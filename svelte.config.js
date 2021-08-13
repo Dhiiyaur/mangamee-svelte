@@ -1,7 +1,11 @@
+const adapter = require('@sveltejs/adapter-netlify')
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
+
+		adapte: adapter(),
 		target: '#svelte'
 	}
 };
