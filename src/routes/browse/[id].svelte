@@ -14,7 +14,6 @@
     import { goto } from '$app/navigation';
     export let id
 
-
     let pageNumber = parseInt(id);
     $: fetchBrowseManga(pageNumber)
 
@@ -35,7 +34,9 @@
 </svelte:head>
 <div class="p-10 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-5">
     {#each $BrowseMangas as BrowseManga}
+    <a class= "rounded-lg overflow-hidden shadow-lg" href={`/manga/${BrowseManga.MangaLink}`}>
         <MangaCard dataManga = {BrowseManga}/>
+    </a>
     {/each}
 </div>
 <div class="p-7 gap-5 flex flex-wrap justify-center">

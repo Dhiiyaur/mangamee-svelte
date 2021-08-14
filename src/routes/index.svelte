@@ -33,6 +33,8 @@
 </div>
 <div class="p-10 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-5">
     {#each $SearchMangas as SearchManga}
-        <MangaCard dataManga = {SearchManga}/>
+        <a class= "rounded-lg overflow-hidden shadow-lg" href={`/manga/${SearchManga.MangaLink}`}>
+            <MangaCard dataManga = {SearchManga}/>
+        </a>
     {/each}
 </div>
