@@ -19,6 +19,7 @@
 </div> -->
 <a class = "rounded-lg overflow-hidden shadow-lg" href="/">
     <!-- <div class="rounded-lg overflow-hidden shadow-lg"> -->
+        
     <div>
         <img class="rounded-t-lg" src={dataManga.MangaCover} alt={dataManga.MangaTitle} >
         <div class="px-6 py-4">
