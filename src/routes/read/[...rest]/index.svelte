@@ -25,8 +25,9 @@
 
 </script>
 
-<div class="p-10">
+<div class="p-5"/>
+<div>
     {#each images.Image as image}
-        <img src= {image.Image} alt="" on:error={handleImageError}>
+        <img class="mx-auto" src= {image.Image} alt="" on:error={handleImageError}>
     {/each}
 </div>

@@ -20,20 +20,21 @@
 <svelte:head>
     <title>Mangamee</title>
 </svelte:head>
-<div class= "p-20">
-    <div class="bg-white shadow p-4 flex">
-        <!-- <span class="w-auto flex justify-end items-center text-gray-500 p-2">
-            <i class="material-icons text-3xl">search</i>
-        </span> -->
-        <input class="w-full rounded p-2" type="text" placeholder="Try 'naruto'" bind:value={searchTerm} on:keypress={onKeyPress}>
-        <button class="bg-red-400 hover:bg-red-300 rounded text-white p-2 pl-4 pr-4" on:click={getMangaName}>
+
+<div class="p-5"/>
+<div class= "">
+    <div class="flex bg-white shadow"> 
+        <input class="w-full rounded p-3" type="text" placeholder="Try 'naruto'" bind:value={searchTerm} on:keypress={onKeyPress}>
+        <button class="bg-red-400 hover:bg-red-300 rounded text-white p-2" on:click={getMangaName}>
                 <p class="font-semibold text-xs">Search</p>
         </button>
     </div>
 </div>
-<div class="p-10 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-5">
+
+<div class="p-5"/>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-5">
     {#each $SearchMangas as SearchManga}
-        <a class= "rounded-lg overflow-hidden shadow-lg" href={`/manga/${SearchManga.MangaLink}`}>
+        <a class= "" href={`/manga/${SearchManga.MangaLink}`}>
             <MangaCard dataManga = {SearchManga}/>
         </a>
     {/each}
