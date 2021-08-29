@@ -14,7 +14,8 @@
 
     };
 
-
+    // let arr = $SearchMangas
+    // console.log($arr.length)
 </script>
 
 <svelte:head>

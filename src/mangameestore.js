@@ -1,8 +1,11 @@
 import { writable } from 'svelte/store';
 
 const MangameeBeApi = 'https://go-mangamee.herokuapp.com';
+// const MangameeBeApi = 'http://localhost:50494';
+
 
 const ApiBrowse = `${MangameeBeApi}/browse`
+const ApiUpdate = `${MangameeBeApi}/update`
 const ApiSearch = `${MangameeBeApi}/search`
 const ApiManga = `${MangameeBeApi}/manga`
 const ApiRead = `${MangameeBeApi}/page`
@@ -15,6 +18,16 @@ export const fetchBrowseManga = async (id) => {
     const res = await fetch(url + `?pageNumber=${id}`);
     const data = await res.json();
     BrowseMangas.set(data);
+
+}
+
+export const UpdateMangas = writable([]);
+export const fetchUpdateManga = async (id) => {
+    
+    const url = ApiUpdate;
+    const res = await fetch(url + `?pageNumber=${id}`);
+    const data = await res.json();
+    UpdateMangas.set(data);
 
 }
 
@@ -37,7 +50,7 @@ export const fetchMangaChapter = async (lang, mangaTitle) => {
         return data;
     } catch (err) {
 
-        console.log(err)
+        // console.log(err)
         return null
     }
 
@@ -52,7 +65,7 @@ export const fetchMangaImage = async (lang, mangaTitle, chapter) => {
         return data;
     } catch (err) {
 
-        console.log(err)
+        // console.log(err)
         return null
     }
 
