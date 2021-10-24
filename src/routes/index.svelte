@@ -8,10 +8,8 @@
         if (e.charCode === 13) getMangaName()};
 
     const getMangaName = () => {
-
         let lang = "EN"
         fetchSearchManga(lang, searchTerm);
-
     };
 
     // let arr = $SearchMangas

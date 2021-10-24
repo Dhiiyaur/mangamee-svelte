@@ -25,7 +25,7 @@
 
 </script>
 
-<div class="p-5"/>
+<div class="my-10"/>
 <div>
     {#each images.Image as image}
         <img class="mx-auto" src= {image.Image} alt="" on:error={handleImageError}>
